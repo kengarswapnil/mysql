@@ -1,0 +1,32 @@
+create database intro;
+use intro;
+
+create table Cricket(
+id int primary key,
+name varchar(50));
+
+create table football(
+id int primary key,
+name varchar(50));
+
+insert into Cricket(id,name) values
+(1,"swapnil"),
+(2,"samrth"),
+(3,"Akash"),
+(4,"swati");
+
+
+insert into football(id,name) values
+(1,"swapnil"),
+(2,"samrth"),
+(3,"virat"),
+(4,"swati");
+
+select * from football;
+
+select * from Cricket  as c inner join football as f on c.name=f.name; 
+
+select c.name ,f.id from Cricket as c right join football as f on c.name = f.name;
+select c.name ,f.id from Cricket as c left join football as f on c.name = f.name;
+
+
