@@ -1,0 +1,19 @@
+create database Emp2;
+
+use Emp2;
+
+create table Employee3(
+id int primary key,
+fullname varchar(50),
+salary int ,
+city varchar(50));
+
+
+insert into Employee3(id,fullname ,salary,city) values
+(1,"swapnil",800000,"solapur"),
+(2,"Akash",700000,"pune"),
+(3,"swati",900000,"solapur"),
+(4,"Anushka",1000000,"solapur");
+
+
+select * from Employee3 where  salary<(select avg(salary) from Employee3);
